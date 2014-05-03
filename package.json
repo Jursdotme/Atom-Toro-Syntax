@@ -1,0 +1,11 @@
+{
+  "name": "Atom-toro-syntax",
+  "theme": "syntax",
+  "version": "0.1.0",
+  "description": "Toro Syntax theme for Atom",
+  "repository": "https://github.com/Jursdotme/Atom-Toro-Syntax",
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.92.0"
+  }
+}
