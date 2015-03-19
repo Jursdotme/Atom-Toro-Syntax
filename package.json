@@ -6,6 +6,6 @@
   "repository": "https://github.com/Jursdotme/Atom-Toro-Syntax",
   "license": "MIT",
   "engines": {
-    "atom": ">0.92.0"
+    "atom": ">0.187.0"
   }
 }
