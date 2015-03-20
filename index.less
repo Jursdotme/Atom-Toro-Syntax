@@ -1,1 +1,220 @@
-@import "./stylesheets/base.less";
+@import 'syntax-variables';
+
+atom-text-editor, :host {
+  background: @noise, @syntax-background-color;
+  // background-color: ;
+  color: @syntax-text-color;
+  text-shadow: @text-shadow;
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .gutter {
+    background: @noise;
+    background-color: rgb(223, 213, 201);
+
+
+    .cursor-line {
+      background: @noise;
+      background-color: rgb(200, 189, 177);
+      text-shadow: 0 1px rgba(255,255,255, 0.1);
+    }
+    .git-line-modified {
+      border: 0;
+      background: @noise;
+      background-color: @syntax-color-modified;
+      text-shadow: 0 1px rgba(255,255,255, 0.1);
+      color: rgb(79, 35, 30);
+    }
+    .git-line-added {
+      border: 0;
+      background: @noise;
+      background-color: @syntax-color-added;
+      text-shadow: 0 1px rgba(255,255,255, 0.1);
+      color: #475811;
+    }
+  }
+
+  .line-number.cursor-line-no-selection {
+    //background-color: @syntax-gutter-background-color-selected;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    border-color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+
+  .search-results .marker .region {
+    background-color: transparent;
+    border: 1px solid @syntax-result-marker-color;
+  }
+
+  .search-results .marker.current-result .region {
+    border: 1px solid @syntax-result-marker-color-selected;
+  }
+
+  .lines, .line-numbers {
+    background: none!important;
+  }
+
+  .gfm {
+    .markup {
+      &.heading {
+        color: @green;
+        font-weight: bold;
+      }
+
+      &.underline {
+        color: @orange;
+        text-decoration: underline;
+      }
+    }
+
+    .bold {
+      font-weight: bold;
+    }
+
+    .italic {
+      font-style: italic;
+    }
+
+    .raw {
+      color: @cyan;
+    }
+
+    .variable.list {
+      color: @red;
+      font-weight: bold;
+    }
+
+    .link {
+      color: #CCC;
+
+      .entity {
+        color: @blue;
+      }
+    }
+  }
+}
+
+.comment {
+  color: rgba(118, 113, 98, 0.48);
+}
+
+.string {
+  color: @orange;
+}
+
+.constant.numeric {
+  color: @blue;
+}
+
+.constant.language {
+  color: @blue;
+}
+
+.constant.character,
+.constant.other {
+  color: @blue;
+}
+
+.keyword {
+  color: @red;
+}
+
+.storage {
+  color: @red;
+}
+
+.storage.type {
+  font-style: italic;
+  color: @cyan;
+}
+
+.entity.name.class {
+  text-decoration: none;
+  color: @green;
+}
+
+.entity.other.inherited-class {
+  font-style: italic;
+  text-decoration: none;
+  color: @green;
+}
+
+// Prevent underlines from making their way into whitespace elements
+.leading-whitespace,
+.trailing-whitespace {
+  display: inline-block;
+}
+
+.entity.name.function {
+  color: @green;
+}
+
+.entity.name.instance {
+  color: @cyan;
+}
+
+.variable.parameter {
+  font-style: italic;
+  color: @light-orange;
+}
+
+.entity.name.tag {
+  color: @red;
+}
+
+.entity.other.attribute-name {
+  color: @green;
+}
+
+.support.function {
+  color: @cyan;
+}
+
+.support.constant {
+  color: @cyan;
+}
+
+.support.type,
+.support.class {
+  font-style: italic;
+  color: @cyan;
+}
+
+.invalid {
+  color: #F8F8F0;
+  background-color: @red;
+}
+
+.invalid.deprecated {
+  color: #F8F8F0;
+  background-color: @blue;
+}
+
+// Jade syntax
+.class.jade {
+  color: @blue;
+}
+
+// 'this' Javascript
+.variable.language.js {
+  color: @red;
+}
